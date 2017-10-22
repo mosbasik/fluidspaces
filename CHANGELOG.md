@@ -8,6 +8,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 - This CHANGELOG file, to keep track of changes in this project over time.
 - Project URL now included in setup.py information.
 - MIT license (from [Choose A License](https://choosealicense.com/licenses/mit/)) now included in `LICENSE` and in setup.py information.
+- `-t`/`--toggle` instead of prompting the user for which workspace to use as the target for going/sending/bringing actions, use the first workspace whose title contains `2:` as the target.  Can be used to implement quick toggling between the top two workspaces.
 
 ## 0.0.1 - 2017-10-21
 ### Added

@@ -11,18 +11,17 @@ from fluidspaces import i3Commands, RofiCommands, Workspaces
 
 def main(args=None):
     # set up command line argument parsing
-    # parser = argparse.ArgumentParser(description='Create i3 workspaces with custom names on the fly, navigate between them using their name or their position, and send containers between them.')
     parser = argparse.ArgumentParser(description=__doc__)
     send_actions = parser.add_mutually_exclusive_group(required=False)
-    # parser.add_argument('-t', '--toggle',
-    #                     action='store_true',
-    #                     help='Select workspace 2 w/o menu (useful for quick toggling)')
     send_actions.add_argument('-b', '--bring-to',
                               action='store_true',
                               help='Bring focused container with you to workspace')
     send_actions.add_argument('-s', '--send-to',
                               action='store_true',
                               help='Send focused container away to workspace')
+    parser.add_argument('-t', '--toggle',
+                        action='store_true',
+                        help='Skip menu prompt & choose workspace 2 (useful for "Alt-Tab" behavior)')
 
     # parse the passed flags
     args = parser.parse_args()
@@ -33,28 +32,27 @@ def main(args=None):
     wps.export_wps()  # normalize wps numbers and export
     wps.import_wps(i3Commands.get_wps_str())  # import normalized wps
 
-    # # if the toggle flag was passed, just get the second workspace
-    # if args.toggle:
-    #     print('Implement toggling')
-    #     return
+    # if the toggle flag was passed, just get the second workspace
+    if args.toggle:
+        chosen_plain_name = '2:'
 
-    # # but if the toggle flag wasn't passed, start setting up the menu
-    # else:
-
-    # choose menu prompt to show user
-    if args.bring_to:
-        prompt = 'Bring container to workspace: '
-    elif args.send_to:
-        prompt = 'Send container to workspace: '
+    # but if the toggle flag wasn't passed, start setting up the menu
     else:
-        prompt = 'Go to workspace: '
 
-    # prompt user to to choose a workspace
-    chosen_plain_name = RofiCommands.menu(wps.choices_str, prompt=prompt)
+        # choose menu prompt to show user
+        if args.bring_to:
+            prompt = 'Bring container to workspace: '
+        elif args.send_to:
+            prompt = 'Send container to workspace: '
+        else:
+            prompt = 'Go to workspace: '
 
-    # exit program if the user didn't choose a workspace
-    if chosen_plain_name is None:
-        return
+        # prompt user to to choose a workspace
+        chosen_plain_name = RofiCommands.menu(wps.choices_str, prompt=prompt)
+
+        # exit program if the user didn't choose a workspace
+        if chosen_plain_name is None:
+            return
 
     # find out if a workspace containing chosen_plain_name already existed
     chosen_wp = wps.get_wp(chosen_plain_name)
