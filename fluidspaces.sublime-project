@@ -2,6 +2,13 @@
 	"folders":
 	[
 		{
+			"folder_exclude_patterns":
+			[
+				"fluidspaces.egg-info",
+				".git",
+				".cache",
+				".eggs"
+			],
 			"path": "."
 		}
 	]
