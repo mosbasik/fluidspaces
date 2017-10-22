@@ -22,6 +22,8 @@ setup(
     long_description=readme(),
     author='Peter Henry',
     author_email='me@peterhenry.net',
+    url='https://github.com/mosbasik/fluidspaces',
+    license='MIT',
     classifiers=[
       'Development Status :: 3 - Alpha',
       'Programming Language :: Python :: 3.6',
