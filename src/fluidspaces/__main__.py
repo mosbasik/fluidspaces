@@ -68,21 +68,26 @@ def main(args=None):
         chosen_wp_is_new = False
         chosen_i3_name = chosen_wp.i3_name
 
-    # if either send_to or bring_to were passed, send container to chosen workspace
-    if args.bring_to or args.send_to:
+    # SEND TO CASE
+    if args.send_to:
         i3Commands.send_to_wp(chosen_i3_name)
+
+    # BRING TO CASE
+    elif args.bring_to:
+        i3Commands.send_to_wp(chosen_i3_name)
+        i3Commands.go_to_wp(chosen_i3_name)
         if chosen_wp_is_new:
             wps.import_wps(i3Commands.get_wps_str())
-            wps.export_wps()
+        wps.promote_wp(chosen_i3_name)
+        wps.export_wps()
 
-    # if send_to was passed, exit the program because there's nothing left to do
-    if args.send_to:
-        return
-
-    # otherwise activate the chosen workspace (the default behavior)
-    i3Commands.go_to_wp(chosen_i3_name)
-    wps.promote_wp(chosen_plain_name)
-    wps.export_wps()
+    # GO TO CASE
+    else:
+        i3Commands.go_to_wp(chosen_i3_name)
+        if chosen_wp_is_new:
+            wps.import_wps(i3Commands.get_wps_str())
+        wps.promote_wp(chosen_i3_name)
+        wps.export_wps()
 
 
 if __name__ == '__main__':

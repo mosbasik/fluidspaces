@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0-rc.2.html).
 
 ## [Unreleased]
+### Fixed
+- Navigating to / bringing a container to a new workspace promotes that workspace (the new workspace used to stay at the back where it was created - with a numberless name - until it was navigated to again)
 
 ## [0.2.0] - 2017-10-22
 ### Added
