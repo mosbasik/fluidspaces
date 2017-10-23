@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0-rc.2.html).
 
 ## [Unreleased]
+
+## [0.2.1] - 2017-10-22
 ### Fixed
 - Navigating to / bringing a container to a new workspace promotes that workspace (the new workspace used to stay at the back where it was created - with a numberless name - until it was navigated to again)
 
@@ -32,6 +34,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 - Navigating to a workspace with any form of `fluidspaces` "promotes" the chosen workspace to position 1 and renumbers the rest of the workspaces to remove the just-created gap.
 
 
-[Unreleased]: https://github.com/mosbasik/fluidspaces/compare/0.2.0...HEAD
+[Unreleased]: https://github.com/mosbasik/fluidspaces/compare/0.2.1...HEAD
+[0.2.1]: https://github.com/mosbasik/fluidspaces/compare/0.2.0...0.2.1
 [0.2.0]: https://github.com/mosbasik/fluidspaces/compare/0.1.0...0.2.0
 [0.1.0]: https://github.com/mosbasik/fluidspaces/compare/0.0.1...0.1.0
