@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0-rc.2.html).
 
 ## [Unreleased]
+### Changed
+- Now using `setuptools_scm` to get the package version from git tags instead of keeping a `VERSION` file
 
 
 ## [0.1.0] - 2017-10-22

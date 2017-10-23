@@ -9,15 +9,9 @@ def readme():
         return f.read()
 
 
-def version():
-    '''Get version from version file'''
-    with open('VERSION') as f:
-        return f.read().strip()
-
-
 setup(
     name='fluidspaces',
-    version=version(),
+    use_scm_version=True,
     description='Navigate i3wm named containers',
     long_description=readme(),
     author='Peter Henry',
@@ -32,6 +26,7 @@ setup(
     package_dir={'': 'src'},
     setup_requires=[
         'pytest-runner',
+        'setuptools_scm',
     ],
     tests_require=[
         'pytest',
