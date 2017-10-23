@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0-rc.2.html).
 
 ## [Unreleased]
+### Added
+- `-V`/`--version` flag prints program version and exits
+
 ### Changed
 - Now using `setuptools_scm` to get the package version from git tags instead of keeping a `VERSION` file
 

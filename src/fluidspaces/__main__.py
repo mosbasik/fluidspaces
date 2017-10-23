@@ -5,11 +5,13 @@ on their their name or position, and move containers between them.
 '''
 
 import argparse
+from setuptools_scm import get_version
 
 from fluidspaces import i3Commands, RofiCommands, Workspaces
 
 
 def main(args=None):
+
     # set up command line argument parsing
     parser = argparse.ArgumentParser(description=__doc__)
     send_actions = parser.add_mutually_exclusive_group(required=False)
@@ -22,6 +24,9 @@ def main(args=None):
     parser.add_argument('-t', '--toggle',
                         action='store_true',
                         help='Skip menu prompt & choose workspace 2 (useful for "Alt-Tab" behavior)')
+    parser.add_argument('-V', '--version',
+                        action='version',
+                        version=get_version(root='../..', relative_to=__file__))
 
     # parse the passed flags
     args = parser.parse_args()
