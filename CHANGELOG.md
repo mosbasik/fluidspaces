@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0-rc.2.html).
 
 ## [Unreleased]
+### Fixed
+- Crash on startup if not run from an intact git repository (i.e. if run using a sdist build, a github archive, a pypi archive, or literally anything but a dev evironment)
 
 ## [0.2.1] - 2017-10-22
 ### Fixed
