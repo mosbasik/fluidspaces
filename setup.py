@@ -3,17 +3,20 @@
 from setuptools import setup, find_packages
 
 
-def readme():
-    '''Get long description from readme file'''
+def long_description():
+    '''Build long description from a few files'''
     with open('README.rst') as f:
-        return f.read()
+        readme = f.read()
+    with open('CHANGELOG.rst') as f:
+        changelog = f.read()
+    return '\n' + readme + '\n' + changelog
 
 
 setup(
     name='fluidspaces',
     use_scm_version=True,
     description='Navigate i3wm named containers',
-    long_description=readme(),
+    long_description=long_description(),
     author='Peter Henry',
     author_email='me@peterhenry.net',
     url='https://github.com/mosbasik/fluidspaces',

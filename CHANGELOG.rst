@@ -17,6 +17,7 @@ Added
 Changed
 ^^^^^^^
 - README and CHANGELOG files now use reStructuredText format instead of Markdown
+- Package's long description now includes the contents of CHANGELOG at the end
 - All argument descriptions now start with small letters to match ``argparse``'s built-in descriptions for ``--help`` and ``--version``
 
 
