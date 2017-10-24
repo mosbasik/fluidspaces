@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 
 def readme():
     '''Get long description from readme file'''
-    with open('README.md') as f:
+    with open('README.rst') as f:
         return f.read()
 
 

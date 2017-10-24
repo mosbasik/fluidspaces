@@ -5,6 +5,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 
 ## [Unreleased]
+### Added
+- An actually useful README file
+
+### Changed
+- README file now uses reStructuredText format instead of Markdown
+- All argument descriptions now start with small letters to match `argparse`'s built-in descriptions for `--help` and `--version`
 
 
 ## [0.2.2] - 2017-10-23

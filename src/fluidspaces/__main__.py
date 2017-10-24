@@ -16,13 +16,13 @@ def main(args=None):
     send_actions = parser.add_mutually_exclusive_group(required=False)
     send_actions.add_argument('-b', '--bring-to',
                               action='store_true',
-                              help='Bring focused container with you to workspace')
+                              help='bring focused container with you to workspace')
     send_actions.add_argument('-s', '--send-to',
                               action='store_true',
-                              help='Send focused container away to workspace')
+                              help='send focused container away to workspace')
     parser.add_argument('-t', '--toggle',
                         action='store_true',
-                        help='Skip menu prompt & choose workspace 2 (useful for "Alt-Tab" behavior)')
+                        help='skip menu prompt & choose workspace 2 (useful for "Alt-Tab" behavior)')
     parser.add_argument('-V', '--version',
                         action='version',
                         version=__version__)
