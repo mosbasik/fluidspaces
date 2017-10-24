@@ -10,6 +10,10 @@ The format is based on `Keep a Changelog`_ and this project adheres to `Semantic
 
 Unreleased_
 -----------
+
+
+0.2.3_ - 2017-10-24
+-------------------
 Added
 ^^^^^
 - An actually useful README file
@@ -73,4 +77,5 @@ Added
 .. _0.2.0: https://github.com/mosbasik/fluidspaces/compare/0.1.0...0.2.0
 .. _0.2.1: https://github.com/mosbasik/fluidspaces/compare/0.2.0...0.2.1
 .. _0.2.2: https://github.com/mosbasik/fluidspaces/compare/0.2.1...0.2.2
-.. _Unreleased: https://github.com/mosbasik/fluidspaces/compare/0.2.2...HEAD
+.. _0.2.3: https://github.com/mosbasik/fluidspaces/compare/0.2.2...0.2.3
+.. _Unreleased: https://github.com/mosbasik/fluidspaces/compare/0.2.3...HEAD
