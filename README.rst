@@ -6,46 +6,38 @@ Fluidspaces
 - Quick toggle between the two most recently used workspaces
 - Bring/send containers to workspaces while doing any of the above
 
+Prerequisite Software
+---------------------
 
-Installation
-------------
+i3_
+^^^
 
-Requirements
-^^^^^^^^^^^^
+Necessary for fluidspaces to be useful. ::
 
-:i3_:
-  Required for fluidspaces to be useful
+  pacman -S i3  # to install on Arch
 
-  - Arch: ``sudo pacman -S i3``
-  - Ubuntu: refer to the `i3 repository docs`_
+Refer to the `i3 repository docs`_ to install on Ubuntu.
 
+rofi_
+^^^^^
 
-:rofi_:
-  Used to get user input via pop-up menu
+Used to get user input via pop-up menu. ::
 
-  - Arch: ``sudo pacman -S rofi``
-  - Ubuntu: ``sudo apt install rofi``
-
+  sudo pacman -S rofi  # to install on Arch
+  sudo apt install rofi  # to install on Ubuntu
 
 Installing Fluidspaces
-^^^^^^^^^^^^^^^^^^^^^^
+----------------------
 
-From PyPi
-"""""""""
-
-::
+From PyPi::
 
   pip install fluidspaces
 
-From Source
-"""""""""""
-
-::
+From source::
 
   git clone https://github.com/mosbasik/fluidspaces.git
   cd fluidspaces
   pip install .
-
 
 Argument Reference
 ------------------
@@ -55,7 +47,6 @@ Argument Reference
 -s, --send-to   send focused container away to workspace
 -t, --toggle    skip menu prompt & choose workspace 2 (useful for "Alt-Tab" behavior)
 -V, --version   show program's version number and exit
-
 
 Example i3 configuration
 ------------------------
@@ -68,7 +59,6 @@ Example i3 configuration
 
   bindsym $mod+Tab          exec fluidspaces --toggle
   bindsym $mod+Shift+Tab    exec fluidspaces --toggle --send-to
-
 
 .. _i3: https://i3wm.org/
 .. _i3 repository docs: https://i3wm.org/docs/repositories.html

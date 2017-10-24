@@ -10,6 +10,9 @@ The format is based on `Keep a Changelog`_ and this project adheres to `Semantic
 
 Unreleased_
 -----------
+Changed
+^^^^^^^
+- Simpler README format to get it to render nicely on PyPi and Github
 
 
 0.2.3_ - 2017-10-24
