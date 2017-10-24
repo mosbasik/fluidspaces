@@ -11,53 +11,53 @@ The format is based on `Keep a Changelog`_ and this project adheres to `Semantic
 Unreleased_
 -----------
 Changed
-^^^^^^^
-- Simpler README format to get it to render nicely on PyPi and Github
+
+- Simpler README and CHANGELOG formats to get them to render nicely on PyPi and Github
 
 
-0.2.3_ - 2017-10-24
+0.2.3_
 -------------------
 Added
-^^^^^
+
 - An actually useful README file
 
 Changed
-^^^^^^^
+
 - README and CHANGELOG files now use reStructuredText format instead of Markdown
 - Package's long description now includes the contents of CHANGELOG at the end
 - All argument descriptions now start with small letters to match ``argparse``'s built-in descriptions for ``--help`` and ``--version``
 
 
-0.2.2_ - 2017-10-23
+0.2.2_
 --------------------
 Fixed
-^^^^^
+
 - Crash on startup if not run from an intact git repository (i.e. if run using a sdist build, a github archive, a pypi archive, or literally anything but a dev evironment)
 
 
-0.2.1_ - 2017-10-22
+0.2.1_
 --------------------
 Fixed
-^^^^^
+
 - Navigating to / bringing a container to a new workspace promotes that workspace (the new workspace used to stay at the back where it was created - with a numberless name - until it was navigated to again)
 
 
-0.2.0_ - 2017-10-22
+0.2.0_
 --------------------
 Added
-^^^^^
+
 - ``-V``/``--version`` flag prints program version and exits
 
 
 Changed
-^^^^^^^
+
 - Now using ``setuptools_scm`` to get the package version from git tags instead of keeping a ``VERSION`` file
 
 
-0.1.0_ - 2017-10-22
+0.1.0_
 --------------------
 Added
-^^^^^
+
 - This CHANGELOG file, to keep track of changes in this project over time.
 - Project URL now included in setup.py information.
 - MIT license (from `Choose a License`_) now included in ``LICENSE`` and in setup.py information.
@@ -65,10 +65,10 @@ Added
 
 .. _Choose a License: https://choosealicense.com/licenses/mit/
 
-0.0.1 - 2017-10-21
+0.0.1
 --------------------
 Added
-^^^^^
+
 - ``fluidspaces`` script navigates to the workspace chosen by the user from a list of the current i3 workspaces.
 - ``-s``/``--send-to`` send the currently focused i3 container to the chosen workspace.
 - ``-b``/``--bring-to`` navigate to the chosen workspace and bring the currently focused i3 container to it at the same time.
