@@ -8,8 +8,11 @@ The format is based on `Keep a Changelog`_ and this project adheres to `Semantic
 .. _Semantic Versioning: http://semver.org/spec/v2.0.0-rc.2.html
 
 
-Unreleased_
------------
+.. Unreleased_
+.. -----------
+
+0.2.4_
+-------------------
 Changed
 
 - Simpler README and CHANGELOG formats to get them to render nicely on PyPi and Github
@@ -81,4 +84,5 @@ Added
 .. _0.2.1: https://github.com/mosbasik/fluidspaces/compare/0.2.0...0.2.1
 .. _0.2.2: https://github.com/mosbasik/fluidspaces/compare/0.2.1...0.2.2
 .. _0.2.3: https://github.com/mosbasik/fluidspaces/compare/0.2.2...0.2.3
-.. _Unreleased: https://github.com/mosbasik/fluidspaces/compare/0.2.3...HEAD
+.. _0.2.4: https://github.com/mosbasik/fluidspaces/compare/0.2.3...0.2.4
+.. _Unreleased: https://github.com/mosbasik/fluidspaces/compare/0.2.4...HEAD
