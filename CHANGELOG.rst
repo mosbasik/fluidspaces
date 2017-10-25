@@ -8,8 +8,12 @@ The format is based on `Keep a Changelog`_ and this project adheres to `Semantic
 .. _Semantic Versioning: http://semver.org/spec/v2.0.0-rc.2.html
 
 
-Unreleased_
------------
+.. Unreleased_
+.. -----------
+
+
+0.3.1_
+-------------------
 Fixed
 
 - Added missing quotes to sample i3 configuration lines in README
@@ -102,4 +106,5 @@ Added
 .. _0.2.3: https://github.com/mosbasik/fluidspaces/compare/0.2.2...0.2.3
 .. _0.2.4: https://github.com/mosbasik/fluidspaces/compare/0.2.3...0.2.4
 .. _0.3.0: https://github.com/mosbasik/fluidspaces/compare/0.2.4...0.3.0
-.. _Unreleased: https://github.com/mosbasik/fluidspaces/compare/0.3.0...HEAD
+.. _0.3.1: https://github.com/mosbasik/fluidspaces/compare/0.3.0...0.3.1
+.. _Unreleased: https://github.com/mosbasik/fluidspaces/compare/0.3.1...HEAD
