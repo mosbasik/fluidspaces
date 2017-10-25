@@ -6,22 +6,22 @@ Fluidspaces
 - Quick toggle between the two most recently used workspaces
 - Bring/send containers to workspaces while doing any of the above
 
-Prerequisite Software
----------------------
+Dependencies
+------------
 
 i3_
 ^^^
 
-Necessary for fluidspaces to be useful. ::
+You need this installed for ``fluidspaces`` to be useful, of course. ::
 
   pacman -S i3  # to install on Arch
 
 Refer to the `i3 repository docs`_ to install on Ubuntu.
 
-rofi_
-^^^^^
+rofi_ (optional)
+^^^^^^^^^^^^^^^^
 
-Used to get user input via pop-up menu. ::
+Can be used as a replacement for ``dmenu``.  Has a nicer looking menu, displays different prompts for different actions, etc.  Not required for ``fluidspaces`` to function. ::
 
   sudo pacman -S rofi  # to install on Arch
   sudo apt install rofi  # to install on Ubuntu
@@ -42,21 +42,32 @@ From source::
 Argument Reference
 ------------------
 
--h, --help      show this help message and exit
--b, --bring-to  bring focused container with you to workspace
--s, --send-to   send focused container away to workspace
--t, --toggle    skip menu prompt & choose workspace 2 (useful for "Alt-Tab" behavior)
--V, --version   show program's version number and exit
+-h, --help                  show this help message and exit
+-b, --bring-to              bring focused container with you to workspace
+-s, --send-to               send focused container away to workspace
+-m PROGRAM, --menu=PROGRAM  program to render the menu {dmenu,rofi} (default: dmenu)
+-t, --toggle                skip menu & choose workspace 2 (default: False)
+-V, --version               show program's version number and exit
 
-Example i3 configuration
-------------------------
+Example i3 configurations
+-------------------------
 
-::
+Using defaults::
 
   bindsym $mod+c            exec fluidspaces
   bindsym $mod+Shift+c      exec fluidspaces --send-to
   bindsym $mod+Ctrl+Shift+c exec fluidspaces --bring-to
 
+  bindsym $mod+Tab          exec fluidspaces --toggle
+  bindsym $mod+Shift+Tab    exec fluidspaces --toggle --send-to
+
+Using ``rofi`` instead of ``dmenu``::
+
+  bindsym $mod+c            exec fluidspaces --menu=rofi
+  bindsym $mod+Shift+c      exec fluidspaces --menu=rofi --send-to
+  bindsym $mod+Ctrl+Shift+c exec fluidspaces --menu=rofi --bring-to
+
+  # note that toggling bypasses the menu entirely, so no need to define it
   bindsym $mod+Tab          exec fluidspaces --toggle
   bindsym $mod+Shift+Tab    exec fluidspaces --toggle --send-to
 
