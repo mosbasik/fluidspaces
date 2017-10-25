@@ -8,8 +8,16 @@ The format is based on `Keep a Changelog`_ and this project adheres to `Semantic
 .. _Semantic Versioning: http://semver.org/spec/v2.0.0-rc.2.html
 
 
-.. Unreleased_
-.. -----------
+Unreleased_
+-----------
+Added
+
+- ``-m``/``--menu`` flags taking the values ``dmenu`` or ``rofi``.  The named program is used to render the menu - so passing ``--menu=rofi`` results in the behavior that was default in version 0.2.4.
+
+Changed
+
+- Now defaults to using ``dmenu`` to generate the menu instead of ``rofi``.  This means ``fluidspaces`` can be used with just the tools included with basic i3.
+- Made some of the helptext more concise and mentioned default values for ``--menu`` and ``--toggle``.
 
 0.2.4_
 -------------------
