@@ -8,8 +8,11 @@ The format is based on `Keep a Changelog`_ and this project adheres to `Semantic
 .. _Semantic Versioning: http://semver.org/spec/v2.0.0-rc.2.html
 
 
-.. Unreleased_
-.. -----------
+Unreleased_
+-----------
+Fixed
+
+- Added missing quotes to sample i3 configuration lines in README
 
 
 0.3.0_

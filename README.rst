@@ -54,22 +54,22 @@ Example i3 configurations
 
 Using defaults::
 
-  bindsym $mod+c            exec fluidspaces
-  bindsym $mod+Shift+c      exec fluidspaces --send-to
-  bindsym $mod+Ctrl+Shift+c exec fluidspaces --bring-to
+  bindsym $mod+c            exec "fluidspaces"
+  bindsym $mod+Shift+c      exec "fluidspaces --send-to"
+  bindsym $mod+Ctrl+Shift+c exec "fluidspaces --bring-to"
 
-  bindsym $mod+Tab          exec fluidspaces --toggle
-  bindsym $mod+Shift+Tab    exec fluidspaces --toggle --send-to
+  bindsym $mod+Tab          exec "fluidspaces --toggle"
+  bindsym $mod+Shift+Tab    exec "fluidspaces --toggle --send-to"
 
 Using ``rofi`` instead of ``dmenu``::
 
-  bindsym $mod+c            exec fluidspaces --menu=rofi
-  bindsym $mod+Shift+c      exec fluidspaces --menu=rofi --send-to
-  bindsym $mod+Ctrl+Shift+c exec fluidspaces --menu=rofi --bring-to
+  bindsym $mod+c            exec "fluidspaces --menu=rofi"
+  bindsym $mod+Shift+c      exec "fluidspaces --menu=rofi --send-to"
+  bindsym $mod+Ctrl+Shift+c exec "fluidspaces --menu=rofi --bring-to"
 
   # note that toggling bypasses the menu entirely, so no need to define it
-  bindsym $mod+Tab          exec fluidspaces --toggle
-  bindsym $mod+Shift+Tab    exec fluidspaces --toggle --send-to
+  bindsym $mod+Tab          exec "fluidspaces --toggle"
+  bindsym $mod+Shift+Tab    exec "fluidspaces --toggle --send-to"
 
 .. _i3: https://i3wm.org/
 .. _i3 repository docs: https://i3wm.org/docs/repositories.html
